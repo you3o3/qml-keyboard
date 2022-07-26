@@ -1,5 +1,5 @@
 import QtQuick 2.0
-import QtQuick.XmlListModel 2.0
+import QtQml.XmlListModel
 
 Item {
     id: root
@@ -53,10 +53,11 @@ Item {
 
         Repeater {
             id: rowRepeater
-            model: XmlListModel {
-                source: root.source
-                query: "/Keyboard/Row"
-            }
+            model: 4
+//            model: XmlListModel {
+//                source: root.source
+//                query: "/Keyboard/Row"
+//            }
 
             Row {
                 id: keyRow
@@ -68,12 +69,12 @@ Item {
                     
                     model: XmlListModel {
                         source: root.source
-                        query: "/Keyboard/Row[" + (rowIndex + 1) + "]/Key"
+                        query: "/Keyboard/Row" + keyRow.rowIndex + "/Key"
 
-                        XmlRole { name: "labels"; query: "@labels/string()" }
-                        XmlRole { name: "ratio"; query: "@ratio/number()" }
-                        XmlRole { name: "icon"; query: "@icon/string()" }
-                        XmlRole { name: "checkable"; query: "@checkable/string()" }
+                        XmlListModelRole { name: "labels"; attributeName: "labels"; elementName: "" }
+                        XmlListModelRole { name: "ratio"; attributeName: "ratio"; elementName: "" }
+                        XmlListModelRole { name: "icon"; attributeName: "icon"; elementName: "" }
+                        XmlListModelRole { name: "checkable"; attributeName: "checkable"; elementName: "" }
                     }
 
                     Key {
@@ -144,3 +145,9 @@ Item {
         keyClicked( allUpperCase ? text.toUpperCase() : text);
     }
 }
+
+/*##^##
+Designer {
+    D{i:0;formeditorZoom:0.5}
+}
+##^##*/

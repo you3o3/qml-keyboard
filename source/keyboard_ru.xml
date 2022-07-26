@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Keyboard>
-    <Row>
+    <Row0>
         <Key labels = "й|1" ratio = "0.91"/>
         <Key labels = "ц|2" ratio = "0.91"/>
         <Key labels = "у|3" ratio = "0.91"/>
@@ -12,8 +12,8 @@
         <Key labels = "щ|9" ratio = "0.91"/>
         <Key labels = "з|0" ratio = "0.91"/>
         <Key labels = "х|-_"   ratio = "0.91"/>
-    </Row>
-    <Row>
+    </Row0>
+    <Row1>
         <Key labels = "ф|%`~" ratio = "0.91"/>
         <Key labels = "ы|^|" ratio = "0.91"/>
         <Key labels = "в|*\" ratio = "0.91"/>
@@ -25,8 +25,8 @@
         <Key labels = "д|&apos;&quot;" ratio = "0.91"/>
         <Key labels = "ж|/" ratio = "0.91"/>
         <Key labels = "э|?" ratio = "0.91"/>
-    </Row>
-    <Row>
+    </Row1>
+    <Row2>
         <Key labels = "⇑!shift" ratio = "0.91" checkable = "true"/>
         <Key labels = "я|@" ratio = "0.91"/>
         <Key labels = "ч|$" ratio = "0.91"/>
@@ -38,12 +38,12 @@
         <Key labels = "б|&lt;" ratio = "0.91"/>
         <Key labels = "ю|&gt;" ratio = "0.91"/>
         <Key labels = "⌫!backspace" ratio = "0.91"/>
-    </Row>
-    <Row>
+    </Row2>
+    <Row3>
         <Key labels = "123!source:keyboard_num.xml" ratio = "1.5"/>
         <Key labels = "Ru!source:keyboard_us.xml" ratio = "1"/>
         <Key labels = " " ratio = "5"/>
         <Key labels = ".|," ratio = "1"/>
         <Key labels = "↵!enter" ratio = "1.5"/>
-    </Row>
+    </Row3>
 </Keyboard>

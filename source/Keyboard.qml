@@ -15,7 +15,10 @@ Rectangle {
     property alias keyColor: keyboardItem.keyColor
     property alias keyPressedColor: keyboardItem.keyPressedColor
 
+    property alias keyboardItem: keyboardItem
+
     color: "#192430"
+
     width: 1024
     height: 640
 
@@ -24,8 +27,12 @@ Rectangle {
         anchors.centerIn: parent
         source: "keyboard_us.xml"
 
-        onKeyClicked: console.log(key)
-        onSwitchSource: root.source = source
+        onKeyClicked: function(key) {
+            console.log(key)
+        }
+        onSwitchSource: function(source){
+            root.source = source
+        }
     }
 }
 

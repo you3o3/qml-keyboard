@@ -68,7 +68,7 @@ Item {
             model: secondaryLabels.length
 
             Rectangle {
-                property bool isSelected: alternatesRow.selectedIndex == index
+                property bool isSelected: alternatesRow.selectedIndex === index
                 color: isSelected ? mainLabelItem.color : keyPressedColor
                 height: backgroundItem.height
                 width: backgroundItem.width
